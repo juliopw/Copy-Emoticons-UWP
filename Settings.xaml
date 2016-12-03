@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="Copy_Emoticons.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Copy_Emoticons"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    RequestedTheme="Dark"
+    FontFamily="Ebrima"
+    Style="{StaticResource PageBackground1}">
+
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Uid="settingsText" Text="Settings" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Button x:Uid="clearFavs" Content="Clear all Favs" Grid.Row="0" Click="clearFavs" Style="{StaticResource ButtonStyle1}" MaxWidth="200" Height="40"/>
+            <ScrollViewer Grid.Row="1" Margin="10,20" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+                <TextBlock x:Uid="changelogText" Text="Changelog" TextAlignment="Left" xml:space="preserve"/>
+            </ScrollViewer>
+
+        </Grid>
+        <RichTextBlock Grid.Row="2" TextAlignment="Center" HorizontalAlignment="Center">
+            <Paragraph>
+                Julio Witwytzkyj
+            </Paragraph>
+            <Paragraph>
+                Twitter:
+                <Hyperlink Foreground="#FF35A1FF" NavigateUri="https://twitter.com/juliopw">@juliopw</Hyperlink>
+            </Paragraph>
+        </RichTextBlock>
+    </Grid>
+</Page>
